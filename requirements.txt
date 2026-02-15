@@ -1,0 +1,15 @@
+# 核心库
+tkinter-tooltip==3.1.0        # 增强的 Tkinter 组件 (可选)
+Pillow==10.2.0                # 图像处理
+matplotlib==3.8.2             # 数据可视化 (学情分析)
+pandas==2.2.0                 # 数据处理
+scikit-learn==1.4.0           # 机器学习 (简单的 AI 算法)
+jieba==0.42.1                 # 中文分词 (NLP)
+numpy==1.26.3                 # 数值计算
+
+# 数据库 (Python自带 sqlite3，这里列出 ORM 供参考，本项目暂用原生 SQL)
+# SQLAlchemy==2.0.25
+
+# 其它工具
+fpdf==1.7.2                   # 生成 PDF 报告
+openpyxl==3.1.2               # Excel 导出
