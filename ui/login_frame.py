@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter.constants import *
 try:
     import ttkbootstrap as ttk
     from ttkbootstrap.constants import *
@@ -47,7 +48,7 @@ class LoginFrame(ttk.Frame):
         self.password_entry = ttk.Entry(parent, show="*")
         self.password_entry.pack(fill=X, pady=5)
 
-        ttk.Button(parent, text="登录", command=self.login, bootstyle="primary").pack(fill=X, pady=20)
+        ttk.Button(parent, text="登录", command=self.login).pack(fill=X, pady=20)
 
     def create_register_widgets(self, parent):
         ttk.Label(parent, text="用户名:").pack(fill=X, pady=5)
@@ -67,7 +68,7 @@ class LoginFrame(ttk.Frame):
         ttk.Radiobutton(parent, text="学生", variable=self.role_var, value="student").pack(fill=X)
         ttk.Radiobutton(parent, text="教师", variable=self.role_var, value="teacher").pack(fill=X)
 
-        ttk.Button(parent, text="注册", command=self.register, bootstyle="success").pack(fill=X, pady=20)
+        ttk.Button(parent, text="注册", command=self.register).pack(fill=X, pady=20)
 
     def login(self):
         username = self.username_entry.get()

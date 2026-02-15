@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter.constants import *
 try:
     import ttkbootstrap as ttk
     from ttkbootstrap.constants import *
@@ -22,8 +23,8 @@ class AssignmentManagerFrame(ttk.Frame):
         # Toolbar
         toolbar = ttk.Frame(self, padding=5)
         toolbar.pack(fill=X)
-        ttk.Button(toolbar, text="新建作业", command=self.create_assignment, bootstyle="success").pack(side=LEFT)
-        ttk.Button(toolbar, text="刷新", command=self.load_assignments, bootstyle="info-outline").pack(side=LEFT, padx=5)
+        ttk.Button(toolbar, text="新建作业", command=self.create_assignment).pack(side=LEFT)
+        ttk.Button(toolbar, text="刷新", command=self.load_assignments).pack(side=LEFT, padx=5)
 
         # Assignment List
         columns = ("id", "title", "deadline", "create_time")
@@ -92,7 +93,7 @@ class CreateAssignmentDialog(tk.Toplevel):
         # Set default deadline (e.g., 7 days from now)
         # For simplicity, leave empty for now or use placeholder
 
-        ttk.Button(self, text="创建", command=self.save, bootstyle="primary").pack(pady=20)
+        ttk.Button(self, text="创建", command=self.save).pack(pady=20)
 
     def save(self):
         title = self.title_entry.get()
@@ -144,7 +145,7 @@ class AssignmentEditorDialog(tk.Toplevel):
         toolbar.pack(fill=X)
         ttk.Button(toolbar, text="添加单选题", command=lambda: self.add_question("single_choice")).pack(side=LEFT, padx=2)
         ttk.Button(toolbar, text="添加主观题", command=lambda: self.add_question("subjective")).pack(side=LEFT, padx=2)
-        ttk.Button(toolbar, text="删除题目", command=self.delete_question, bootstyle="danger").pack(side=RIGHT)
+        ttk.Button(toolbar, text="删除题目", command=self.delete_question).pack(side=RIGHT)
 
         columns = ("id", "type", "content", "score")
         self.tree = ttk.Treeview(list_frame, columns=columns, show="headings")
@@ -223,7 +224,7 @@ class AddQuestionDialog(tk.Toplevel):
         self.score_entry.pack(fill=X, padx=padding, pady=5)
         self.score_entry.insert(0, "10")
 
-        ttk.Button(self, text="保存", command=self.save, bootstyle="primary").pack(pady=20)
+        ttk.Button(self, text="保存", command=self.save).pack(pady=20)
 
     def save(self):
         content = self.content_text.get("1.0", END).strip()

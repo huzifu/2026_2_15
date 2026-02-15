@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter.constants import *
 try:
     import ttkbootstrap as ttk
     from ttkbootstrap.constants import *

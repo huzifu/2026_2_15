@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter.constants import *
 # 尝试导入 ttkbootstrap，如果不存在则回退到标准 tkinter
 try:
     import ttkbootstrap as ttk

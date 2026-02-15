@@ -7,3 +7,4 @@ jieba==0.42.1
 numpy==1.26.3
 fpdf==1.7.2
 openpyxl==3.1.2
+ttkbootstrap==1.10.1

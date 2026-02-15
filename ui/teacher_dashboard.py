@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter.constants import *
 try:
     import ttkbootstrap as ttk
     from ttkbootstrap.constants import *
@@ -25,7 +26,7 @@ class TeacherDashboard(ttk.Frame):
         header.pack(fill=X)
         
         ttk.Label(header, text=f"教师端 - {self.user.nickname}", font=("Helvetica", 16, "bold")).pack(side=LEFT)
-        ttk.Button(header, text="注销", command=self.logout_callback, bootstyle="danger-outline").pack(side=RIGHT)
+        ttk.Button(header, text="注销", command=self.logout_callback).pack(side=RIGHT)
 
         # Tabs
         self.notebook = ttk.Notebook(self)

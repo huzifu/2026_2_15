@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter.constants import *
 try:
     import ttkbootstrap as ttk
     from ttkbootstrap.constants import *
@@ -23,7 +24,7 @@ class StudentAssignmentListFrame(ttk.Frame):
         # Toolbar
         toolbar = ttk.Frame(self, padding=5)
         toolbar.pack(fill=X)
-        ttk.Button(toolbar, text="刷新", command=self.load_assignments, bootstyle="info-outline").pack(side=LEFT)
+        ttk.Button(toolbar, text="刷新", command=self.load_assignments).pack(side=LEFT)
 
         # Assignment List
         columns = ("id", "title", "teacher", "deadline", "status")
@@ -119,7 +120,7 @@ class TakingAssignmentDialog(tk.Toplevel):
         
         bottom_frame = ttk.Frame(self, padding=10)
         bottom_frame.pack(side=BOTTOM, fill=X)
-        ttk.Button(bottom_frame, text="提交作业", command=self.submit_assignment, bootstyle="success").pack(side=RIGHT)
+        ttk.Button(bottom_frame, text="提交作业", command=self.submit_assignment).pack(side=RIGHT)
 
         # Scrollable area
         self.canvas = tk.Canvas(main_container)
